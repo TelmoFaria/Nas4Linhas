@@ -31,7 +31,7 @@ namespace Nas4Linhas.Models
         [Required]
         public DateTime DataJogo { get; set; }
 
-        //many to many
+        //relacionamento many to many
         public ICollection<Equipas> Equipas { get; set; }
 
         //F Keys
