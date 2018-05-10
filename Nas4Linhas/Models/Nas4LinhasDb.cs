@@ -9,7 +9,7 @@ namespace Nas4Linhas.Models
 {
     public class Nas4LinhasDb : DbContext {
 
-        public Nas4LinhasDb() : base("Nas4LinhasDb1") { }
+        public Nas4LinhasDb() : base("Nas4LinhasDbConnectionString") { }
 
         //descrever o nome das tabelas na base de dados
         public virtual DbSet<Atletas> Atletas { get; set; } //tabela atletas

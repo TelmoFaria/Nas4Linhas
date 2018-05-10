@@ -10,6 +10,9 @@ namespace Nas4Linhas.Models
     public class Equipas
     {
         public Equipas() {
+            Atletas = new HashSet<Atletas>();
+            Jogos = new HashSet<Jogos>();
+
 
         }
 
