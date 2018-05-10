@@ -11,7 +11,7 @@ namespace Nas4Linhas.Models
 
         public Nas4LinhasDb() : base("Nas4LinhasDbConnectionString") { }
 
-        //descrever o nome das tabelas na base de dados
+        // descrever o nome das tabelas na base de dados
         public virtual DbSet<Atletas> Atletas { get; set; } //tabela atletas
         public virtual DbSet<Competicao> Competicao { get; set; } //tabela competicao
         public virtual DbSet<Equipas> Equipas { get; set; } //tabela equipas
