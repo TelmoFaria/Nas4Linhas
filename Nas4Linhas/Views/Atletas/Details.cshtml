@@ -1,0 +1,66 @@
+﻿@model Nas4Linhas.Models.Atletas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Atletas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Equipas.NomeEquipa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Equipas.NomeEquipa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nacionalidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nacionalidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Golos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Golos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataNasc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataNasc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Jogos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Jogos)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AtletaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

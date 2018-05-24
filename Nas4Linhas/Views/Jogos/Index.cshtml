@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Nas4Linhas.Models.Jogos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Competicao.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EquipaVisitada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EquipaVisitante)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cartoes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resultado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataJogo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Competicao.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EquipaVisitada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EquipaVisitante)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cartoes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resultado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataJogo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.JogoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.JogoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.JogoID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -8,6 +8,11 @@ namespace Nas4Linhas.Models
 {
     public class Competicao
     {
+        public Competicao()
+        {
+            this.Jogos = new HashSet<Jogos>();
+            this.Equipas = new HashSet<Equipas>();
+        }
 
         [Key]
         public int CompeticaoID { get; set; }
@@ -20,8 +25,8 @@ namespace Nas4Linhas.Models
 
 
         //Relacionar Modelos
-        public ICollection<Jogos> Jogos { get; set; }
-
+        public virtual ICollection<Jogos> Jogos { get; set; }
+        public virtual ICollection<Equipas> Equipas { get; set; }
 
     }
 }

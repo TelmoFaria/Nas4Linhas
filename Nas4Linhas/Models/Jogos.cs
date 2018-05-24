@@ -10,26 +10,25 @@ namespace Nas4Linhas.Models
     public class Jogos
     {
         public Jogos() {
-            Equipas = new HashSet<Equipas>();
+            this.Equipas = new HashSet<Equipas>();
         }
 
         [Key]
         public int JogoID { get; set; }
+        [Required]
+        public string EquipaVisitada { get; set; }
 
         [Required]
-        public string NomeJogo { get; set; }
-
-        [Required]
-        public string Substituicoes { get; set; }
+        public string EquipaVisitante { get; set; }
 
         [Required]
         public int Cartoes { get; set; }
 
         [Required]
-        public int Golos { get; set; }
+        public string Resultado { get; set; }
 
         [Required]
-        public DateTime DataJogo { get; set; }
+        public DateTime? DataJogo { get; set; }
 
         //many to many
         public ICollection<Equipas> Equipas { get; set; }
@@ -38,6 +37,8 @@ namespace Nas4Linhas.Models
         public Competicao Competicao { get; set; }
         [ForeignKey("Competicao")]
         public int CompeticaoFK { get; set; }
+
+
 
     }
 }

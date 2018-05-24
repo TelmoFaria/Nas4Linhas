@@ -20,21 +20,21 @@ namespace Nas4Linhas.Models
         public string Nome { get; set; }
 
         [Required]
-        public int Golos { get; set; }
-
-
-        [Required]
         public string Nacionalidade { get; set; }
 
         [Required]
-        public DateTime DataNasc { get; set; }
+        public int Golos { get; set; }
 
         [Required]
-        public int Jogos { get; set; }      
-        
+        public DateTime? DataNasc { get; set; }
+
+        [Required]
+        public int Jogos { get; set; }
+
         //F. Keys
-        public Equipas Equipas { get; set;}
         [ForeignKey("Equipas")]
         public int EquipasFK { get; set; }
+        public Equipas Equipas { get; set; }
+
     }
 }

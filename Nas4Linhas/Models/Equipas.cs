@@ -11,10 +11,8 @@ namespace Nas4Linhas.Models
     {
         public Equipas() {
 
-            Atletas = new HashSet<Atletas>();
-            Jogos = new HashSet<Jogos>();
-
-
+            this.Atletas = new HashSet<Atletas>();
+            this.Jogos = new HashSet<Jogos>();
         }
 
         [Key]
@@ -39,13 +37,13 @@ namespace Nas4Linhas.Models
         public string Logo { get; set; }
 
         //many to many
-        public ICollection<Jogos> Jogos { get; set; }
-        public ICollection<Atletas> Atletas { get; set; }
+        public virtual ICollection<Jogos> Jogos { get; set; }
+        public virtual ICollection<Atletas> Atletas { get; set; }
 
         //Foreign Keys
-        public Competicao Competicao { get; set; }
         [ForeignKey("Competicao")]
         public int CompeticaoFK { get; set; }
+        public virtual Competicao Competicao { get; set; }
 
     }
 }
